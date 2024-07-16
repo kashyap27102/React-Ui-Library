@@ -1,5 +1,10 @@
-const Button = () => {
-  return <button className="text-blue-400">Button</button>;
-};
+import { ComponentProps } from "react";
+type ButtonProps = ComponentProps<"button">;
 
-export default Button;
+export const Button = ({ ...props }: ButtonProps) => {
+  return (
+    <button className="text-blue-400" {...props}>
+      Button
+    </button>
+  );
+};
